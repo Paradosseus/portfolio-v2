@@ -34,7 +34,11 @@ code {
   margin: 0px 15px;
 }
 
+*{
 
+  font-family: Aldrich, Arial,sans-serif;
+
+}
 
 @media (min-width: 1024px) {
   .icon-text {
