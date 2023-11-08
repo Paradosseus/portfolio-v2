@@ -13,7 +13,7 @@ export const Preloader = () => {
                     }}
                     transition={{ ease: easeOut, delay: 0.5, duration: .5 }} />
 
-                <h1 className='font-bold text-[25px] uppercase md:text-[20px] sm:-text-[15px]'>L o a d i n g</h1>
+                <h1 className='font-bold text-[25px] uppercase md:text-[20px] sm:text-[15px]'>L o a d i n g</h1>
             </div>
         </motion.div>
     )
