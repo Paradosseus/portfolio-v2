@@ -1,12 +1,12 @@
 import React from 'react'
 import Logo from "../assets/FJ-logo-01.svg"
-import { easeIn, easeOut, motion } from "framer-motion";
+import { easeOut, motion } from "framer-motion";
 export const Preloader = () => {
 
 
     return (
         <motion.div className='flex justify-center items-center w-screen h-screen' animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 1 }}>
-            <div className='text-center '>
+            <div className='text-center'>
                 <motion.img src={Logo} alt="" className='lg:w-[100px] md:w-[75px] w-[50px] m-auto my-6'
                     animate={{
                         rotate: 360,

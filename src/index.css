@@ -35,9 +35,7 @@ code {
 }
 
 *{
-
   font-family: Aldrich, Arial,sans-serif;
-
 }
 
 @media (min-width: 1024px) {
@@ -75,8 +73,4 @@ code {
       padding: 9px 20px;
       font-size: 18px;
     }
-  }
-
-  .project-button:last-child {
-    margin-left: 4px; 
   }

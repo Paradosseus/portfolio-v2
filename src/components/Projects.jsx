@@ -1,78 +1,40 @@
 import { SiPhp, SiMysql, SiAdobephotoshop, SiAdobeillustrator } from "react-icons/si";
+import { useContext } from "react";
+import ProjectContext from "../context/ProjectContext";
+import { Link } from "react-router-dom";
 
 export const Projects = () => {
+
+    const { projects } = useContext(ProjectContext);
+
     return (
-        <div>
+        <>
             <h2 className="text-[18px] font-bold md:text-[22px] lg:text-[26px]">PROJECTS</h2>
-            <p className="text-[#464646] text-[14px] md:text-[18px] lg:text-[20px] mb-2">Below are the technologies I learned and used on my projects:</p>
-            <div className="grid gap-2 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
-                <div className="my-2">
-                    <h3 className="uppercase font-bold text-[14px] md:text-[16px] lg:text-[18px]">Project 1</h3>
-                    <p className="text-[#464646] text-[12px] md:text-[14px] lg:text-[16px]">This is a placeholder for project description</p>
-                    <div className="flex justify-between my-2">
-                        <div className="flex text-[40px] md:text-[45px] lg:text-[50px]">
-                            <div className="project-icon-container">
-                                <SiPhp />
+            <div className="grid gap-2 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 my-2" >
+                {projects.map((project) => {
+                    return (
+
+                        <div className="my-4" key={project.name}>
+                            <h3 className="uppercase font-bold text-[14px] md:text-[16px] lg:text-[18px]">{project.name}</h3>
+                            <p className="text-[#464646] text-[12px] md:text-[14px] lg:text-[16px]">{project.description}</p>
+                            <div className="flex justify-between my-2">
+                                <div className="text-[10px] md:text-[12px] lg:text-[15px]">
+                                    {project.tools.map((tool, index) => {
+                                        return (
+                                            <span className="uppercase">{tool}{index !== project.tools.length - 1 && ' · '}</span>
+                                        )
+                                    })}
+                                </div>
                             </div>
-                            <div className="project-icon-container">
-                                <SiPhp />
+                            <div className="mb-4">
+                                <Link to={project.siteLink} target="_blank"><button className="project-button mr-2">DEMO</button></Link>
+                                <Link to={project.githubLink} target="_blank"><button className="project-button">CODE</button></Link>
                             </div>
-                            <div className="project-icon-container">
-                                <SiPhp />
-                            </div>
+                            <div className=" h-[200px] md:h-[300px]"><img src={project.screenshot} alt="" /></div>
                         </div>
-                        <div className="my-auto">
-                            <a href=""><button className="project-button">DEMO</button></a>
-                            <a href=""><button className="project-button">CODE</button></a>
-                        </div>
-                    </div>
-                    <div className="bg-gray-400 h-[200px] md:h-[300px]"></div>
-                </div>
-                <div className="my-2">
-                    <h3 className="uppercase font-bold text-[14px] md:text-[16px] lg:text-[18px]">Project 1</h3>
-                    <p className="text-[#464646] text-[12px] md:text-[14px] lg:text-[16px]">This is a placeholder for project description</p>
-                    <div className="flex justify-between my-2">
-                        <div className="flex text-[40px] md:text-[45px] lg:text-[50px]">
-                            <div className="project-icon-container">
-                                <SiPhp />
-                            </div>
-                            <div className="project-icon-container">
-                                <SiPhp />
-                            </div>
-                            <div className="project-icon-container">
-                                <SiPhp />
-                            </div>
-                        </div>
-                        <div className="my-auto">
-                            <a href=""><button className="project-button">DEMO</button></a>
-                            <a href=""><button className="project-button">CODE</button></a>
-                        </div>
-                    </div>
-                    <div className="bg-gray-400 h-[200px] md:h-[300px]"></div>
-                </div>
-                <div className="my-2">
-                    <h3 className="uppercase font-bold text-[14px] md:text-[16px] lg:text-[18px]">Project 1</h3>
-                    <p className="text-[#464646] text-[12px] md:text-[14px] lg:text-[16px]">This is a placeholder for project description</p>
-                    <div className="flex justify-between my-2">
-                        <div className="flex text-[40px] md:text-[45px] lg:text-[50px]">
-                            <div className="project-icon-container">
-                                <SiPhp />
-                            </div>
-                            <div className="project-icon-container">
-                                <SiPhp />
-                            </div>
-                            <div className="project-icon-container">
-                                <SiPhp />
-                            </div>
-                        </div>
-                        <div className="my-auto">
-                            <a href=""><button className="project-button">DEMO</button></a>
-                            <a href=""><button className="project-button">CODE</button></a>
-                        </div>
-                    </div>
-                    <div className="bg-gray-400 h-[200px] md:h-[300px]"></div>
-                </div>
+                    )
+                })}
             </div>
-        </div>
+        </>
     );
 }

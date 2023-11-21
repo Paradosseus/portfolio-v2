@@ -6,8 +6,7 @@ import { SiPhp, SiMysql, SiAdobephotoshop, SiAdobeillustrator } from "react-icon
 export const Skills = () => {
     return (
         <div>
-            <h2 className="text-[15px] font-bold md:text-[20px] lg:text-[25px]">TECH STACK</h2>
-            <p className="text-[#464646] text-[12px] md:text-[15px] lg:text-[18px]">Below are the technologies I learned and used on my projects:</p>
+            <h2 className="text-[18px] font-bold md:text-[22px] lg:text-[26px]">TECH STACK</h2>
             <div className="skills-icons-container text-[30px] md:text-[40px] lg:text-[50px] flex flex-wrap justify-evenly items-center text-center text-black lg:my-20 md:my-10 my-5">
                 <div className="icon-container ">
                     <AiFillHtml5 className="m-auto" />

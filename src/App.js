@@ -6,6 +6,7 @@ import { Skills } from "./components/Skills";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Preloader } from "./components/Preloader";
+import { Link } from "react-router-dom";
 function App() {
   const [option, setOption] = useState("Skills");
   const [screenLoading, setScreenLoading] = useState(false);
@@ -50,7 +51,7 @@ function App() {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1.7, duration: 0.5 }}
               >
-                WEB DEVELOPER AND DESIGNER
+                WEB DEVELOPER
               </motion.h2>
               <motion.p
                 className="lg:text-[19px] text-[13px] md:text-[16px] max-w-2xl text-justify text-[#464646]"
@@ -70,27 +71,27 @@ function App() {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 2, duration: 1.5 }}
                 >
-                  <a
-                    href="https://www.facebook.com/FJ.Kyou.Chan"
+                  <Link
+                    to="https://www.facebook.com/FJ.Kyou.Chan"
                     target="_blank"
                     className="cursor-pointer"
                   >
                     <AiFillFacebook color="black" />
-                  </a>
-                  <a
-                    href="https://github.com/Paradosseus"
+                  </Link>
+                  <Link
+                    to="https://github.com/Paradosseus"
                     target="_blank"
                     className="cursor-pointer"
                   >
                     <AiFillGithub color="black" />
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/fjcollado/"
+                  </Link>
+                  <Link
+                    to="https://www.linkedin.com/in/fjcollado/"
                     target="_blank"
                     className="cursor-pointer"
                   >
                     <AiFillLinkedin color="black" />
-                  </a>
+                  </Link>
                 </motion.div>
                 <div className="lg:text-2xl text-[14px] md:text-[20px]">
                   <ul className="flex flex-col space-y-2 text-right">
