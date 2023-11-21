@@ -30,9 +30,7 @@ code {
   margin: 0px 25px;
 }
 
-.icon-container {
-  margin: 0px 15px;
-}
+
 
 *{
   font-family: Aldrich, Arial,sans-serif;
@@ -46,10 +44,12 @@ code {
 
   .icon-text {
     font-size: 12px;
+    text-align: center;
   }
 
   .project-icon-container {
     margin-right: 2px;
+
   }
 
 
@@ -74,3 +74,4 @@ code {
       font-size: 18px;
     }
   }
+
