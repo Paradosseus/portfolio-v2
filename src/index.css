@@ -75,3 +75,7 @@ code {
     }
   }
 
+.on-hover:hover {
+  scale: 1.1;
+  animation-duration: 1s;
+}

@@ -13,8 +13,7 @@ export const Projects = () => {
             <div className="grid gap-2 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 my-2" >
                 {projects.map((project) => {
                     return (
-
-                        <div className="my-2" key={project.name}>
+                        <div className="my-2 on-hover" key={project.name}>
                             <h3 className="uppercase font-bold text-[14px] md:text-[16px] lg:text-[18px]">{project.name}</h3>
                             <p className="text-[#464646] text-[12px] md:text-[14px] lg:text-[16px]">{project.description}</p>
                             <div className="flex justify-between my-2">
@@ -27,10 +26,10 @@ export const Projects = () => {
                                 </div>
                             </div>
                             <div className="mb-2">
-                                <Link to={project.siteLink} target="_blank"><button className="project-button mr-2">DEMO</button></Link>
+                                {project.siteLink ? <Link to={project.siteLink} target="_blank"><button className="project-button mr-2">DEMO</button></Link> : <span></span>}
                                 <Link to={project.githubLink} target="_blank"><button className="project-button">CODE</button></Link>
                             </div>
-                            <img src={project.screenshot} alt="" />
+                            <img src={project.screenshot} alt="screenshot of project" />
                         </div>
                     )
                 })}
