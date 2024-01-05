@@ -2,14 +2,15 @@ import { AiFillHtml5 } from "react-icons/ai";
 import { BiLogoTailwindCss, BiLogoCss3, BiLogoJavascript, BiLogoReact, BiLogoFirebase, BiLogoFigma } from "react-icons/bi";
 import { TbBrandKotlin } from "react-icons/tb";
 import { FaLaravel } from "react-icons/fa";
-import { SiPhp, SiMysql, SiAdobephotoshop, SiAdobeillustrator } from "react-icons/si";
+
+import { SiPhp, SiMysql, SiAdobephotoshop } from "react-icons/si";
 
 export const Skills = () => {
 
 
 
     return (
-        <div>
+        <>
             <h2 className="text-[18px] font-bold md:text-[22px] lg:text-[26px]">TECH STACK</h2>
             <div className="grid xl:grid-cols-12 lg:grid-cols-6 grid-cols-3 gap-4 skills-icons-container text-[30px] md:text-[40px] lg:text-[50px] xl:text-[75px]  text-black lg:my-20 md:my-10 my-5">
                 <div className="icon-container">
@@ -61,6 +62,6 @@ export const Skills = () => {
                     <p className="icon-text">Photoshop</p>
                 </div>
             </div>
-        </div>
+        </>
     );
 }

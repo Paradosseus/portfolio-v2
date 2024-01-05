@@ -122,7 +122,6 @@ function App() {
             initial={{ y: -70, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 2.6, duration: 0.5 }}
-            onClick={() => setOption("Projects")}
           >
             {option === "Skills" ? <Skills /> : <Projects />}
           </motion.div>

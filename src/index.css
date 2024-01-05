@@ -75,7 +75,9 @@ code {
     }
   }
 
-.on-hover:hover {
+.project-button:hover {
+  background-color: #DDF2FD;
+  border: 1px solid #0E2954;
+  color: #0E2954;
   scale: 1.1;
-  animation-duration: 1s;
 }
