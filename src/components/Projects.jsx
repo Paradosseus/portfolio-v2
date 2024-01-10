@@ -17,7 +17,7 @@ export const Projects = () => {
                 {projects.map((project) => {
                     return (
                         <motion.div className="my-2 on-hover" key={project.name}
-                            whileHover={{ scale: 1.1 }}>
+                            whileHover={{ scale: 1.05 }}>
                             <h3 className="uppercase font-bold text-[14px] md:text-[16px] lg:text-[18px]">{project.name}</h3>
                             <p className="text-[#464646] text-[12px] md:text-[14px] lg:text-[16px]">{project.description}</p>
                             <div className="flex justify-between my-2">
@@ -31,7 +31,7 @@ export const Projects = () => {
                             </div>
                             <div className="mb-2">
                                 {project.siteLink ? <Link to={project.siteLink} target="_blank"><button className="project-button mr-2">DEMO</button></Link> : <span></span>}
-                                <Link to={project.githubLink} target="_blank"><button className="project-button">CODE</button></Link>
+                                {project.githubLink ? <Link to={project.githubLink} target="_blank"><button className="project-button">CODE</button></Link> : <span></span>}
                             </div>
                             <img src={project.screenshot} alt="screenshot of project" />
                         </motion.div>
