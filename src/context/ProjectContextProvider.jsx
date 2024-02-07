@@ -2,7 +2,9 @@ import ProjectContext from "./ProjectContext";
 import pokelogPreview from "../assets/project-screenshots/pokelog-preview.png";
 import newsletterPreview from "../assets/project-screenshots/newsletter-preview.png";
 import furriendsPreview from "../assets/project-screenshots/furriends-preview.png";
-import nerdhubPreview from "../assets/project-screenshots/nerdhub-preview.png"
+import nerdhubPreview from "../assets/project-screenshots/nerdhub-preview.png";
+import listitPreview from "../assets/project-screenshots/listit-preview.png";
+
 import { AiFillHtml5 } from "react-icons/ai";
 import { BiLogoTailwindCss, BiLogoCss3, BiLogoJavascript, BiLogoReact, BiLogoFirebase, BiLogoFigma } from "react-icons/bi";
 import { TbBrandKotlin } from "react-icons/tb";
@@ -10,6 +12,15 @@ import { FaLaravel } from "react-icons/fa";
 import { SiPhp, SiMysql, SiAdobephotoshop, SiAdobeillustrator } from "react-icons/si";
 const ProjectContextProvider = ({ children }) => {
     const projects = [
+        {
+            name: "List-it",
+            link: "",
+            description: "A simple fullstack Todo list app",
+            tools: ["React", "Laravel", "Rest API"],
+            screenshot: listitPreview,
+            githubLink: "https://github.com/Paradosseus/Listit.git",
+            siteLink: ""
+        },
         {
             name: "NerdHub",
             link: "https://pokelog-i32s84ffw-paradosseus-projects.vercel.app/",
