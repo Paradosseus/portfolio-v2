@@ -13,7 +13,7 @@ export const Header = () => {
                 <img src={Logo} alt="" className="w-[40px] lg:w-[60px]" />
             </div>
             <div className="flex cursor-pointer text-[14px] lg:text-[20px] hover:bg-[#0E2954] hover:text-[#ddf2fd] p-2">
-                <Link to="https://drive.google.com/file/d/14Q5nBvsD7zrHUjlYVRwa1-_JvMZ7oWp_/view?usp=sharing" target="_blank" className="text-[blue-900] font-bold">RESUME</Link>
+                <Link to="https://drive.google.com/file/d/1YkDjy5M0HSeYeyyDIt_TNdnz2VmX8_gu/view?usp=sharing" target="_blank" className="text-[blue-900] font-bold">RESUME</Link>
                 <AiOutlineDownload className="self-center text-[18px] lg:text-[22px]" />
             </div>
         </motion.div>
