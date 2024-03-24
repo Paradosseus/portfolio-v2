@@ -4,17 +4,20 @@ import newsletterPreview from "../assets/project-screenshots/newsletter-preview.
 import furriendsPreview from "../assets/project-screenshots/furriends-preview.png";
 import nerdhubPreview from "../assets/project-screenshots/nerdhub-preview.png";
 import listitPreview from "../assets/project-screenshots/listit-preview.png";
+import citeitoutPreview from "../assets/project-screenshots/citeitout-preview.png";
 
-import { AiFillHtml5 } from "react-icons/ai";
-import { BiLogoTailwindCss, BiLogoCss3, BiLogoJavascript, BiLogoReact, BiLogoFirebase, BiLogoFigma } from "react-icons/bi";
-import { TbBrandKotlin } from "react-icons/tb";
-import { FaLaravel } from "react-icons/fa";
-import { SiPhp, SiMysql, SiAdobephotoshop, SiAdobeillustrator } from "react-icons/si";
 const ProjectContextProvider = ({ children }) => {
     const projects = [
         {
+            name: "Cite-it-out",
+            description: "A category game built in HTML, CSS, Javascript",
+            tools: ["HTML", "CSS", "JavaScript"],
+            screenshot: citeitoutPreview,
+            githubLink: "https://github.com/Paradosseus/cite-it-out.git",
+            siteLink: "https://cite-it-out.vercel.app/"
+        },
+        {
             name: "List-it",
-            link: "",
             description: "A simple fullstack Todo list app",
             tools: ["React", "Laravel", "Rest API"],
             screenshot: listitPreview,
@@ -23,7 +26,6 @@ const ProjectContextProvider = ({ children }) => {
         },
         {
             name: "NerdHub",
-            link: "https://pokelog-i32s84ffw-paradosseus-projects.vercel.app/",
             description: "A Landing page built in Wordpress",
             tools: ["Wordpress"],
             screenshot: nerdhubPreview,
@@ -32,7 +34,6 @@ const ProjectContextProvider = ({ children }) => {
         },
         {
             name: "PokeLog",
-            link: "https://pokelog-i32s84ffw-paradosseus-projects.vercel.app/",
             description: "A Pokedex like application with the use of PokeAPI",
             tools: ["React", "TailwindCSS", "Poke API"],
             screenshot: pokelogPreview,
@@ -41,7 +42,6 @@ const ProjectContextProvider = ({ children }) => {
         },
         {
             name: "Responsive Newsletter - FEM",
-            link: "https://responsive-newsletter-with-form-validation-qu13gm6al.vercel.app/",
             description: "Newsletter project from Frontend Mentor",
             tools: ["HTML", "CSS", "JavaScript"],
             screenshot: newsletterPreview,
@@ -50,7 +50,6 @@ const ProjectContextProvider = ({ children }) => {
         },
         {
             name: "Furriends - Captsone Project",
-            link: "https://responsive-newsletter-with-form-validation-qu13gm6al.vercel.app/",
             description: "A mobile pet adoption application",
             tools: ["Kotlin", "Firebase"],
             screenshot: furriendsPreview,
